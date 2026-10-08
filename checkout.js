@@ -7,6 +7,8 @@ function calcularSubtotal(itens) {
     } return subtotal;
 };
 let itens = [
-    {nome: "x", preco: 150, quantidade: 2}
+    {nome: "x", preco: 150, quantidade: 2},
+    {nome: "y", preco: 200, quantidade: 1},
+    {nome: "z", preco: 80, quantidade: 1},
 ];
 console.log(calcularSubtotal(itens));
