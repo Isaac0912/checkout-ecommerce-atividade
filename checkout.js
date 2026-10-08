@@ -6,9 +6,16 @@ function calcularSubtotal(itens) {
         subtotal += preco * quantidade;
     } return subtotal;
 };
+function contarItens(itens) {
+    let quantidade = 0;
+    for (let i = 0; i < itens.length; i++) {
+        quantidade += itens[i].quantidade;
+    } return quantidade;
+}
 let itens = [
     {nome: "x", preco: 150, quantidade: 2},
     {nome: "y", preco: 200, quantidade: 1},
     {nome: "z", preco: 80, quantidade: 1},
 ];
 console.log(calcularSubtotal(itens));
+console.log(contarItens(itens));
