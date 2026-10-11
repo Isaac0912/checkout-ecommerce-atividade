@@ -19,3 +19,27 @@ let itens = [
 ];
 console.log(calcularSubtotal(itens));
 console.log(contarItens(itens));
+
+/// 2 cupomm
+ function aplicarCupom (cupom, subtotal){
+    let NovoValor = subtotal;
+      if (cupom === "DESK10"){
+        NovoValor = subtotal * 0.90;
+      }else if(cupom === "DESK20"){
+      if (subtotal >= 200){
+        NovoValor = subtotal * 0.80;
+      }
+  }
+    else if (cupom === "FRETEGRATIS") {
+        NovoValor = subtotal - 15;
+    }
+    else{
+      NovoValor = subtotal
+      }
+    return Math.max(0, NovoValor);
+}
+console.log(aplicarCupom("DESK20", calcularSubtotal(itens)));
+console.log(aplicarCupom("DESK20", calcularSubtotal(itens)));
+console.log(aplicarCupom("DESK10", calcularSubtotal(itens)));
+console.log(aplicarCupom("DESK10", calcularSubtotal(itens)));
+console.log(aplicarCupom("FRETEGRATIS", calcularSubtotal(itens)));
